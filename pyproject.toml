@@ -1,0 +1,22 @@
+[project]
+name = "rolling-context"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain-core>=1.7.6",
+    "langchain-ollama>=1.1.0",
+    "langgraph>=1.2.20",
+    "numpy>=2.0",
+    "snowballstemmer>=3.1.1",
+]
+
+[project.scripts]
+rolling-context = "rolling_context:main"
+fts-memory = "rolling_context.fts_memory:main"
+semantic-memory = "rolling_context.semantic_memory:main"
+
+[build-system]
+requires = ["uv_build>=0.12.10,<0.13.0"]
+build-backend = "uv_build"
